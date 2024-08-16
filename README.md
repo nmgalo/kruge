@@ -7,9 +7,9 @@ Kruge is a Kotlin library that provides a user-friendly and flexible way to impl
 ### Features
 
 - Supports various polling strategies:
-  - Endless Run: Executes the polling task indefinitely until manually stopped.
-  - Timeout Run: Executes the polling task for a defined duration.
-  - Retry Limit Run: Executes the polling task until a set number of retries is reached or a successful result is obtained.
+  - *Endless Run:* Executes the polling task indefinitely until manually stopped.
+  - *Timeout Run:* Executes the polling task for a defined duration.
+  - *Retry Limit Run:* Executes the polling task until a set number of retries is reached or a successful result is obtained.
 - Provides real-time updates on the polling status through `StateFlow<PollingState>`
 - Offers methods to start, stop, and check the polling status.
 
