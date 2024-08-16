@@ -1,7 +1,5 @@
 # Kruge
 
-HTTP Polling library
-
 Kruge is a Kotlin library that provides a user-friendly and flexible way to implement various polling strategies in your Android applications. It simplifies the process of repeatedly executing tasks at specified intervals while offering control over the polling behavior.
 
 ### Features
