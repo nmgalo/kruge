@@ -33,6 +33,16 @@ kruge.poll {
     // Update UI or perform actions based on data
 }
 
+// State observer
+kruge.state.collect { state ->
+  when (state) {
+    PollingState.Completed -> TODO()
+    PollingState.Idle -> TODO()
+    is PollingState.Polling<*> -> TODO()
+    PollingState.Terminated -> TODO()
+  }
+}
+
 // Later, you can stop the polling
 kruge.stop()
 
