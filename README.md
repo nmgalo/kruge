@@ -16,7 +16,6 @@ Kruge is a Kotlin library that provides a user-friendly and flexible way to impl
 Here's a basic example of how to use Kruge with Endless Run strategy:
 
 ```kotlin
-
 val scope = CoroutineScope(Dispatchers.IO)
 
 val kruge = Kruge.init<NetworkModel>(
@@ -31,7 +30,12 @@ kruge.poll {
     // Update UI or perform actions based on data
 }
 
-// State observer
+// Later, you can stop the polling
+kruge.stop()
+```
+
+### (Optional) State observer
+```kotlin
 kruge.state.collect { state ->
   when (state) {
     PollingState.Completed -> TODO()
@@ -40,12 +44,7 @@ kruge.state.collect { state ->
     PollingState.Terminated -> TODO()
   }
 }
-
-// Later, you can stop the polling
-kruge.stop()
-
 ```
-
 
 #### Polling State
 Kruge exposes a StateFlow<PollingState> that provides updates on the current polling state:
